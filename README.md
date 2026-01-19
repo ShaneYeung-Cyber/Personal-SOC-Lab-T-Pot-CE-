@@ -1,6 +1,6 @@
 # Personal-SOC-Lab-T-Pot-CE-
 
-## Cloud-Based Honeypot Environment for Threat Analysis
+## Topology
 
 ![Topology](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Cloud-Based%20Cybersecurity%20Homelab.png)
 
