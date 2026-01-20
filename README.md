@@ -110,6 +110,38 @@ It appears to have presences of HTTP which reflects generic probing against non-
 
 ## Noise vs Legitimate Threats
 
+A key part of SOC analysis is differentiating high-volume background scanning from activity that represents a credible security threat.  Throughout the course of this lab, most inbound traffic fell into the category of automated scan noise; While a smaller amount of events showed patterns of malicious behaviour. 
+
+Legitimate threat activity was identified when events progressed beyond reconnaissance(**honeytrap**) and demonstrated intent through service interaction(**Cowrie**), exploit attempts (**Dionaea**), and post-access validation (**Cowrie**). 
+
+---
+Network-Level Detection
+---
+
+In addition to honeypot telemetry, Suricata(Open sourced IDS/IPS) was used to monitor network traffic which generated alert signatures based on known exploit patterns, and suspicious behavior. 
+
+![CVE Panel](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Suricata%20CVE%20-%20Top10.png?raw=true)
+
+Suricata CVE detections reflected repeated probing for known vulnerabilities which indicated exploit scanning rather than confirmed compromise. CVE-2006-2369 --> indicates exploit scanning, not confirmed exploitation
+
+![Signature Panel](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Suricata%20Alert%20Signature.png?raw=true)
+
+Following signatures are clear examples of noise vs threat seperation
+
+***ET SCAN NMAP -sS window 1024*** --> clear scan noise
+
+***SURICATA STREAM Packet with broken ack*** --> protocol anomaly noise (Malformed or inconsistent TCP behavior)
+
+***ET EXPLOIT VNC Server Not Requiring Authentication*** --> Higher-confidence
+
+***ET EXPLOIT DoublePulsar Backdoor installation communication*** --> exploitation attempt
+
+---
+Honeypots showed how attackers interacted with services, while Suricata validated activity at the network level using exploit and scan signatures. This allowed me to seperate background scanning from high-confidence threat.
+---
+
+
+
 
 
 
