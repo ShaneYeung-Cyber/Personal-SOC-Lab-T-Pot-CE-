@@ -104,7 +104,9 @@ To verify consistency between **SSH client version** dashboard visualization and
 
 ![Linux Log](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Linux%20Log.png?raw=true)
 
-As you can see from the linux terminal screenshot, "SSH-2.0-GO" accounted for 1384 occurances and correlates the same with the pie chart. The dominance of Go-based SSH clients strongly indicates automated scanning and survey activity as opposed to interactive human SSH usage. It appears to have presences of HTTP which reflects generic probing against non-HTTP services. (Zgrab is an open-source scanning tool which explains its prescence in automated SSH reconnaissance activity)
+As you can see from the linux terminal screenshot, "SSH-2.0-GO" accounted for 1384 occurances and correlates the same with the pie chart. The dominance of Go-based SSH clients strongly indicates automated scanning and survey activity as opposed to interactive human SSH usage. (Zgrab is an open-source scanning tool which explains its prescence in automated SSH reconnaissance activity)
+
+It appears to have presences of HTTP which reflects generic probing against non-HTTP services. 
 
 
 
