@@ -69,6 +69,28 @@ The screenshot below shows unconventional ports being repeatedly scanned by IPs 
 
 ![HoneyTrap Traffic](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/HoneyTrap.png?raw=true)
 
+---
+**Dionaea** was configured to listen on multiple commonly exploited service ports. This includes SMB(445), NetBIOS(139), MS RPC(135), FTP (21), HTTP(80), HTTPS(443), MS SQL Server(1433), and MySQL(3306). These services are frequent targets of automated exploitation campaigns.
+---
+
+![Dionaea Attack Map](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Dionaea2.png?raw=true)
+
+![Dionaea Pie chart](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Dionaea.png?raw=true)
+
+Screenshots above shows all the countries that have targeted these common ports. **SMB(445)** accounted for more than 85% of the observed traffic. These ports were targeted more than **56,000 times**.  
+
+***Dionaea's*** activity represented exploit intent which complimented HoneyTrap's scan-level visibility and Cowrie's post-access interaction data.
+
+
+![Honeypot Total Attacks](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Honeypot%20Summary.png?raw=true)
+![Honeypot Chart](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Honeypot%20Summary2.png?raw=true)
+
+Screenshot above shows summarizes total interactions recorded across all deployed honeypots. Over ***259,000*** were captured over 7 days with Honeytrap sitting at #1. 
+
+---
+This distribution mirrors real-world SOC conditions and demonstrates practical SOC triage by seperating background noise from actionable security events.
+---
+## Log Analysis and Filtering
 
 
 
