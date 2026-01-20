@@ -12,8 +12,7 @@ SOC analysis and learning was performed through T-Pot’s web interface, which a
 
 ## Architecture Topology
 
-![Topology](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Cloud-Based%20Cybersecurity%20Homelab.png)
-
+![Topology](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Cloud-Based%20Cybersecurity%20Homelab.png?raw=true)
 This topology represents a public-facing AWS environment specifically designed to collect real-world attack telemetry using containerized honeypots for sole-purpose of SOC analysis and learning.
 
 ## Environment Overview
@@ -36,4 +35,12 @@ Number of honeypots enabled : 10
 
 This lab collected telemetry by intentionally exposing a cloud-hosted environment to public internet. Security group rules allowed inbound traffic to selected ports which in turn enabling real-world reconnaissance, scanning activity and exploitation attempts. Each of the honeypots were emulating a specific service or protocol.
 
-When an interaction occured with a honeypot, detailed logs were generated. Some of the many detailed information include source IP information, timestamps, targeted services, and any commands/payloads. These attacks were real and not simulated traffic. The screenshot below is one of the dashboad available with this project.
+![Firewall Security Rules](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Firewall%20rules.png?raw=true)
+
+Screenshot above shows port 1-64000 were opened to capture attacker traffic.  Port 64295 was reserved for Admin SSH access and Port 64297 was for T-Pot web interface.
+
+![T-Pot Attack Map Dashboard](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Attack%20Map.png?raw=true)
+
+When an interaction occured with a honeypot, detailed logs were generated. Some of the many detailed information include source IP information, timestamps, targeted services, and any commands/payloads. These attacks were real and not simulated traffic.
+
+The dots on the map represent all the countries that have attacked my server. The "Top Countries" tab highlights the protocols interacted by country , attack volume, and unique source IP counts per country. (Data displayed in this interface is refreshed every 24 hours due to caching)
