@@ -43,7 +43,7 @@ Screenshot above shows port 1-64000 were opened to capture attacker traffic.  Po
 
 When an interaction occured with a honeypot, detailed logs were generated. Some of the many detailed information include source IP information, timestamps, targeted services, and any commands/payloads. These attacks were real and not simulated traffic.
 
-The dots on the map represent all the countries that have attacked my server. The "Top Countries" tab highlights the protocols interacted by country , attack volume, and unique source IP counts per country. (Data displayed in this interface is refreshed every 24 hours due to caching)
+The dots on the map represent all the countries that have attacked my server. The "Top Countries" tab highlights the protocols interacted by country , attack volume(Hits), and unique source IP counts per country. (Data displayed in this interface is refreshed every 24 hours due to caching)
 
 ## Honeypot Activity Summary 
 
@@ -108,6 +108,7 @@ As you can see from the linux terminal screenshot, "SSH-2.0-GO" accounted for 13
 
 It appears to have presences of HTTP which reflects generic probing against non-HTTP services. 
 
+## Noise vs Legitimate Threats
 
 
 
