@@ -44,3 +44,21 @@ Screenshot above shows port 1-64000 were opened to capture attacker traffic.  Po
 When an interaction occured with a honeypot, detailed logs were generated. Some of the many detailed information include source IP information, timestamps, targeted services, and any commands/payloads. These attacks were real and not simulated traffic.
 
 The dots on the map represent all the countries that have attacked my server. The "Top Countries" tab highlights the protocols interacted by country , attack volume, and unique source IP counts per country. (Data displayed in this interface is refreshed every 24 hours due to caching)
+
+## Honeypot Activity Summary 
+
+Inbound traffic was not evenly distributed across deployed honeypots. Common services like management and remote-access protocols generated the highest volume of interactions, while less commonly targeted services saw miniscule activity.
+
+---
+**Cowrie Honeypot** recorded all activity on SSH(22) and Telnet(23).  When a connection was sucessfully established, the remote commands they inputted were logged before execution.  This provided information about the attacker's intent.
+---
+![Cowrie Commands](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Cowrie%20Top%2010%20COmmands.png?raw=true)
+
+As you can see in the screenshot above, these were the top 10 commands inputted by the attackers. It appears to be commands focused on shell validation and system identifcation.
+
+"cat /proc/uptime 2>/dev/null | cut -d. -f1" - Used to check host uptime during initial environment validation
+
+![HoneyTrap Traffic](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/HoneyTrap.png?raw=true)
+
+
+
