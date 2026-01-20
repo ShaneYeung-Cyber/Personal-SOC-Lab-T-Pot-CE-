@@ -87,6 +87,18 @@ Screenshots above shows all the countries that have targeted these common ports.
 
 Screenshot above shows summarizes total interactions recorded across all deployed honeypots. Over ***259,000*** were captured over 7 days with Honeytrap sitting at #1. 
 
+| Honeypot        | Emulated Service / Purpose              | Typical Ports |
+|-----------------|------------------------------------------|---------------|
+| Heralding       | Credential harvesting (login emulation) | Dynamic / service-dependent |
+| SentryPeer      | P2P malware communication monitoring    | Dynamic TCP/UDP |
+| Tanner          | HTTP-based attack surface emulation     | 80, 8080 |
+| Redishoneypot   | Redis service emulation                 | 6379 |
+| Conpot          | Industrial control system (ICS) protocols | 102, 502 |
+| h0neytr4p       | Generic TCP trap / connection capture   | Multiple |
+| Mailoney        | SMTP mail service emulation             | 25, 587 |
+
+***While these honeypots expanded overall visibility, analysis was prioritized on three honeypots that generated the most meaningful interaction data.***
+
 ---
 This distribution of events mirrors real-world SOC conditions and demonstrates practical SOC triage by seperating background noise from actionable security events.
 ---
