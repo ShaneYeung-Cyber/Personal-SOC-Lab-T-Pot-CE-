@@ -144,6 +144,34 @@ Honeypots showed how attackers interacted with services, while Suricata validate
 
 ## Cross-Analysis with MITRE ATT&CK
 
+Honeypot and network level events were mapped to MITRE ATT&CK phases to support behavioral analysis
+
+| Activity Type                    | Data Source | ATT&CK Phase                  |
+|----------------------------------|-------------|-------------------------------|
+| Broad port scanning              | Honeytrap   | Reconnaissance                |
+| SSH probing                      | Cowrie      | Reconnaissance                |
+| Credential attempts / shell access | Cowrie    | Initial Access                |
+| System enumeration commands      | Cowrie      | Discovery                     |
+| SMB exploit attempts             | Dionaea     | Initial Access / Exploitation |
+
+This chart reflects real-world SOC triage because high-volume reconnaissance is filtered to identify higher-confidence threats.
+
+## Key Learnings (Lessons Learned)
+
+- **Noise dominates real-world telemetry** : Most inbound traffic consisted of automated scanning rather than interactive attacks
+- **Context matters more than volume** : Low-frequency events often carried higher risk than high-volume alerts
+- **Absorbed different roles of tools** : Honeypots, IDS, and OSINT each served its own role within the analytical process
+- **Offline analysis is a core SOC skill** : Preserving and reanalyzing raw logs provided validation beyond dashboard based analysis
+
+
+
+
+
+
+
+
+
+
 
 
 
