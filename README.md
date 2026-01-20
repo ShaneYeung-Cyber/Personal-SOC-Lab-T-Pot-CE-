@@ -9,7 +9,7 @@ SOC analysis and learning were performed through T-Pot’s web interface, which 
 Overall, this project provided hands-on learning experience through exporting and filtering logs to study specific attacks. I also learned how to distinguish background scan noise from legitimate threats.
 
 
-## Topology
+## Architecture Topology
 
 ![Topology](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Cloud-Based%20Cybersecurity%20Homelab.png)
 
