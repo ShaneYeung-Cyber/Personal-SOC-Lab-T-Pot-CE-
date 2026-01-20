@@ -118,11 +118,13 @@ Legitimate threat activity was identified when events progressed beyond reconnai
 Network-Level Detection
 ---
 
-In addition to honeypot telemetry, Suricata(Open sourced IDS/IPS) was used to monitor network traffic which generated alert signatures based on known exploit patterns, and suspicious behavior. 
+In addition to honeypot telemetry, Suricata(**Open sourced IDS/IPS**) was used to monitor network traffic which generated alert signatures based on known exploit patterns, and suspicious behavior. 
 
 ![CVE Panel](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Suricata%20CVE%20-%20Top10.png?raw=true)
 
-Suricata CVE detections reflected repeated probing for known vulnerabilities which indicated exploit scanning rather than confirmed compromise. CVE-2006-2369 --> indicates exploit scanning, not confirmed exploitation
+Suricata CVE detections reflected repeated probing for known vulnerabilities which indicated exploit scanning rather than confirmed compromise. High alert counts for older CVEs were consistent with automated scanning activity.
+
+***CVE-2006-2369*** --> indicates exploit scanning, not confirmed exploitation
 
 ![Signature Panel](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Suricata%20Alert%20Signature.png?raw=true)
 
@@ -139,6 +141,9 @@ Following signatures are clear examples of noise vs threat seperation
 ---
 Honeypots showed how attackers interacted with services, while Suricata validated activity at the network level using exploit and scan signatures. This allowed me to seperate background scanning from high-confidence threat.
 ---
+
+## Cross-Analysis with MITRE ATT&CK
+
 
 
 
