@@ -1,4 +1,4 @@
-# Personal-SOC-Lab-T-Pot-CE-
+# Personal SOC Lab (T-Pot CE)
 
 ## Quick Summary
 
@@ -88,9 +88,25 @@ Screenshots above shows all the countries that have targeted these common ports.
 Screenshot above shows summarizes total interactions recorded across all deployed honeypots. Over ***259,000*** were captured over 7 days with Honeytrap sitting at #1. 
 
 ---
-This distribution mirrors real-world SOC conditions and demonstrates practical SOC triage by seperating background noise from actionable security events.
+This distribution of events mirrors real-world SOC conditions and demonstrates practical SOC triage by seperating background noise from actionable security events.
 ---
-## Log Analysis and Filtering
+## **Log Analysis and Filtering**
+
+All Honeypot logs were exported from the T-pot environment prior to shutdown and preserved as compressed archives. These logs are full set of raw events generated during the observation period and can be used for offline analysis.  
+
+During the 7 day period, I've done numerous KQL(Kibana Query Language) like "event.module : cowrie and destination.port : 22" to analyze the data.
+
+For the purpose of further personal development, I took the initiative to analyze offline logs beyond kibana dashboards. I decompressed my archive in my VM and decided to choose **Cowrie Honeypot** as the subject. Since SOC analyst frequently analyze logs outside SIEMs , I believe this was a good source of hands-on analysis. 
+
+To verify consistency between **SSH client version** dashboard visualization and raw data, data was extracted directly from the JSON logs.
+
+![SSH Version Pie](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Cowrie%20SSH%20Version%20Pie.png?raw=true)
+
+![Linux Log](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Linux%20Log.png?raw=true)
+
+As you can see from the linux terminal screenshot, "SSH-2.0-GO" accounted for 1384 occurances and correlates the same with the pie chart. The dominance of Go-based SSH clients strongly indicates automated scanning and survey activity as opposed to interactive human SSH usage. It appears to have presences of HTTP which reflects generic probing against non-HTTP services. (Zgrab is an open-source scanning tool which explains its prescence in automated SSH reconnaissance activity)
+
+
 
 
 
