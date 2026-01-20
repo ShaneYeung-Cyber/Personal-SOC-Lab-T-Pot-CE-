@@ -52,13 +52,26 @@ Inbound traffic was not evenly distributed across deployed honeypots. Common ser
 ---
 **Cowrie Honeypot** recorded all activity on SSH(22) and Telnet(23).  When a connection was sucessfully established, the remote commands they inputted were logged before execution.  This provided information about the attacker's intent.
 ---
-![Cowrie Commands](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Cowrie%20Top%2010%20COmmands.png?raw=true)
 
-As you can see in the screenshot above, these were the top 10 commands inputted by the attackers. It appears to be commands focused on shell validation and system identifcation.
+As you can see in the screenshot below, these were the top 10 commands inputted by the attackers. It appears to be commands focused on shell validation and system identifcation.
 
 "cat /proc/uptime 2>/dev/null | cut -d. -f1" - Used to check host uptime during initial environment validation
 
+![Cowrie Commands](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Cowrie%20Top%2010%20COmmands.png?raw=true)
+
+---
+**Honeytrap** was used to monitor network interaction across broad range of ports. 
+---
+
+Unlike service-specific honeypot like the one you seen above, Honeytrap does not emulate a single protocol or two. Instead it captures connection attempts and raw data sent during generic scanning and early-stage reconnaissance. Activity observed by honeytrap was typically short-lived. Most interactions did not progress beyond initial contact, which indicated automated scanning. This pattern is consistent with automated scanning.
+
+The screenshot below shows unconventional ports being repeatedly scanned by IPs from United States and France. Timestamp show they were happening every 10-20 seconds. Over the 7 day period, these ports were probed for more than ***140,000 times***.
+
 ![HoneyTrap Traffic](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/HoneyTrap.png?raw=true)
+
+
+
+
 
 
 
