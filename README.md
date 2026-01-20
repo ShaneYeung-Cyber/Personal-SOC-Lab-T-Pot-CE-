@@ -10,6 +10,19 @@ SOC analysis and learning was performed through T-Pot’s web interface, which a
 ***Overall, this project provided hands-on learning experience through exporting and filtering logs to study specific attacks. I also learned how to distinguish background scan noise from legitimate threats.***
 ---
 
+## Table of Contents
+
+- [Architecture Topology](#architecture-topology)
+- [Environment Overview](#environment-overview)
+- [Data Collection Methodology](#data-collection-methodology)
+- [Honeypot Activity Summary](#honeypot-activity-summary)
+- [Log Analysis and Filtering](#log-analysis-and-filtering)
+- [Noise vs Legitimate Threats](#noise-vs-legitimate-threats)
+- [Network-Level Detection](#network-level-detection)
+- [Cross-Analysis with MITRE ATTACK](#cross-analysis-with-mitre-attack)
+- [Key Learnings (Lessons Learned)](#key-learnings-lessons-learned)
+
+  
 ## Architecture Topology
 
 ![Topology](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Cloud-Based%20Cybersecurity%20Homelab.png?raw=true)
