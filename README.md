@@ -116,7 +116,7 @@ To verify consistency between **SSH client version** dashboard visualization and
 
 ![Linux Log](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Linux%20Log.png?raw=true)
 
-As you can see from the linux terminal screenshot, "SSH-2.0-GO" accounted for 1384 occurances and correlates the same with the pie chart. The dominance of Go-based SSH clients strongly indicates automated scanning and survey activity as opposed to interactive human SSH usage. (Zgrab is an open-source scanning tool which explains its prescence in automated SSH reconnaissance activity)
+As you can see from the linux terminal screenshot, "SSH-2.0-GO" accounted for 1384 occurences and correlates the same with the pie chart. The dominance of Go-based SSH clients strongly indicates automated scanning and survey activity as opposed to interactive human SSH usage. (Zgrab is an open-source scanning tool which explains its presence in automated SSH reconnaissance activity)
 
 It appears to have presences of HTTP which reflects generic probing against non-HTTP services. 
 
@@ -130,7 +130,7 @@ Legitimate threat activity was identified when events progressed beyond reconnai
 Network-Level Detection
 ---
 
-In addition to honeypot telemetry, Suricata(**Open sourced IDS/IPS**) was used to monitor network traffic which generated alert signatures based on known exploit patterns, and suspicious behavior. 
+In addition to honeypot telemetry, Suricata(**Open-source IDS/IPS**) was used to monitor network traffic which generated alert signatures based on known exploit patterns, and suspicious behavior. 
 
 ![CVE Panel](https://github.com/ShaneYeung-Cyber/Personal-SOC-Lab-T-Pot-CE-/blob/main/Images/Suricata%20CVE%20-%20Top10.png?raw=true)
 
